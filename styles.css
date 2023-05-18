@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 0.3fr 2.5fr;
+    grid-auto-columns: 1fr;
+     gap: 14px 14px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    
+   "Universe-in-your-space"
+    "text"
+    "solar-system";
+    width: 80%;
+    margin:auto;
+  }
+  
+  h1{
+    color: aquamarine;
+    text-align: center;
+    font-size: 40px;
+
+   }
+
+  .Universe-in-your-space { 
+    grid-area: Universe-in-your-space; 
+    background-color:rebeccapurple;
+   }
+
+  .text { 
+    grid-area: text; 
+   }
+
+   p{
+    color: azure;
+    text-align: left;
+    font-size: 20px;
+   }
+  
+  .solar-system { grid-area: solar-system; 
+    background: #FFFFD0;
+    text-align: center;
+    padding: 30px;
+    margin-top: 0px;
+}
+
+   
+h2
+{
+    color: #FF008E;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/* iPad/Tablet Layout */
+@media screen and (min-width: 810px) {
+    .container {
+        grid-template-areas:
+          "Universe-in-your-space Universe-in-your-space"
+          "text solar-system";
+    }
+}
+
+/* 1440p Monitor Layout (16:9 and 9:16) */
+@media screen and (min-width: 1440px) {
+    .container {
+        grid-template-areas:
+          "Universe-in-your-space Universe-in-your-space"
+          "text text"
+          "solar-system solar-system";
+    }
+}
+
